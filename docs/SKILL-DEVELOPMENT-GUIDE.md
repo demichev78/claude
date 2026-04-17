@@ -231,21 +231,21 @@ with open('file.txt') as f:
 
 Focus on framework-specific conventions, common patterns, and anti-patterns.
 
-**Examples:** `django-patterns`, `nextjs-patterns`, `springboot-patterns`
+**Examples:** `nextjs-turbopack`, `springboot-patterns`
 
 ```markdown
 ---
-name: django-patterns
-description: Django best practices for models, views, URLs, and templates.
+name: springboot-patterns
+description: Spring Boot best practices for controllers, services, repositories, and configuration.
 ---
 
-# Django Patterns
+# Spring Boot Patterns
 
 ## When to Activate
 
-- Building Django applications
-- Creating models and views
-- Django URL configuration
+- Building Spring Boot applications
+- Creating controllers, services, and repositories
+- Configuring beans and application properties
 ```
 
 ### Workflow Skills
@@ -430,7 +430,7 @@ Need to fetch data?
 |----------|--------------|
 | **Be vague** | "Write good code" - not actionable |
 | **Long prose** | Hard to parse, better as code |
-| **Cover too much** | "Python, Django, and Flask patterns" - too broad |
+| **Cover too much** | "Python, FastAPI, and Flask patterns" - too broad |
 | **Skip examples** | Theory without practice is less useful |
 | **Ignore anti-patterns** | Learning what NOT to do is valuable |
 
@@ -706,63 +706,27 @@ How I tested this skill locally.
 
 ### Example 1: Language Standards
 
-**File:** `skills/rust-patterns/SKILL.md`
+**File:** `skills/python-patterns/SKILL.md`
 
 ```markdown
 ---
-name: rust-patterns
-description: Rust idioms, ownership patterns, and best practices for safe, idiomatic code.
+name: python-patterns
+description: Python idioms, type hints, and best practices for safe, idiomatic code.
 origin: ECC
 ---
 
-# Rust Patterns
+# Python Patterns
 
 ## When to Activate
 
-- Writing Rust code
-- Handling ownership and borrowing
-- Error handling with Result/Option
-- Implementing traits
-
-## Ownership Patterns
-
-### Borrowing Rules
-
-\`\`\`rust
-// PASS: CORRECT: Borrow when you don't need ownership
-fn process_data(data: &str) -> usize {
-    data.len()
-}
-
-// PASS: CORRECT: Take ownership when you need to modify or consume
-fn consume_data(data: Vec<u8>) -> String {
-    String::from_utf8(data).unwrap()
-}
-\`\`\`
-
-## Error Handling
-
-### Result Pattern
-
-\`\`\`rust
-use thiserror::Error;
-
-#[derive(Error, Debug)]
-pub enum AppError {
-    #[error("IO error: {0}")]
-    Io(#[from] std::io::Error),
-
-    #[error("Parse error: {0}")]
-    Parse(#[from] std::num::ParseIntError),
-}
-
-pub type AppResult<T> = Result<T, AppError>;
-\`\`\`
+- Writing Python code
+- Applying type hints
+- Error handling with exceptions and context managers
+- Structuring modules and packages
 
 ## Related Skills
 
-- `rust-testing`
-- `rust-security`
+- `python-testing`
 ```
 
 ### Example 2: Framework Patterns

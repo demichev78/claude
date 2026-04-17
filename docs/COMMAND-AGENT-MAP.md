@@ -17,8 +17,6 @@ This document lists each slash command and the primary agent(s) or skills it inv
 | `/go-build` | go-build-resolver | Fix Go build errors |
 | `/python-review` | python-reviewer | Python code review |
 | `/harness-audit` | — | Harness scorecard (no single agent) |
-| `/loop-start` | loop-operator | Start autonomous loop |
-| `/loop-status` | loop-operator | Inspect loop status |
 | `/quality-gate` | — | Quality pipeline (hook-like) |
 | `/model-route` | — | Model recommendation (no agent) |
 | `/orchestrate` | planner, tdd-guide, code-reviewer, security-reviewer, architect | Multi-agent handoff |

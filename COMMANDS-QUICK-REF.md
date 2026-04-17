@@ -1,6 +1,6 @@
 # Commands Quick Reference
 
-> 59 slash commands installed globally. Type `/` in any Claude Code session to invoke.
+> Slash commands installed globally. Type `/` in any Claude Code session to invoke.
 
 ---
 
@@ -25,9 +25,6 @@
 | `/e2e` | Generate + run Playwright end-to-end tests, capture screenshots/videos/traces |
 | `/test-coverage` | Report test coverage, identify gaps |
 | `/go-test` | TDD workflow for Go (table-driven, 80%+ coverage with `go test -cover`) |
-| `/kotlin-test` | TDD for Kotlin (Kotest + Kover) |
-| `/rust-test` | TDD for Rust (cargo test, integration tests) |
-| `/cpp-test` | TDD for C++ (GoogleTest + gcov/lcov) |
 
 ---
 
@@ -38,9 +35,6 @@
 | `/code-review` | Universal code review |
 | `/python-review` | Python — PEP 8, type hints, security, idiomatic patterns |
 | `/go-review` | Go — idiomatic patterns, concurrency safety, error handling |
-| `/kotlin-review` | Kotlin — null safety, coroutine safety, clean architecture |
-| `/rust-review` | Rust — ownership, lifetimes, unsafe usage |
-| `/cpp-review` | C++ — memory safety, modern idioms, concurrency |
 
 ---
 
@@ -50,10 +44,6 @@
 |---------|-------------|
 | `/build-fix` | Auto-detect language and fix build errors |
 | `/go-build` | Fix Go build errors and `go vet` warnings |
-| `/kotlin-build` | Fix Kotlin/Gradle compiler errors |
-| `/rust-build` | Fix Rust build + borrow checker issues |
-| `/cpp-build` | Fix C++ CMake and linker problems |
-| `/gradle-build` | Fix Gradle errors for Android / KMP |
 
 ---
 
@@ -121,12 +111,10 @@
 
 ---
 
-## Loops & Automation
+## Automation
 
 | Command | What it does |
 |---------|-------------|
-| `/loop-start` | Start a recurring agent loop on an interval |
-| `/loop-status` | Check status of running loops |
 | `/claw` | Start NanoClaw v2 — persistent REPL with model routing, skill hot-load, branching, and metrics |
 
 ---
@@ -155,5 +143,4 @@ Session about to end?           → /save-session or /learn-eval
 Resuming next day?              → /resume-session
 Context getting heavy?          → /context-budget then /checkpoint
 Want to extract what you learned? → /learn-eval then /evolve
-Running repeated tasks?         → /loop-start
 ```
