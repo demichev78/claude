@@ -1,10 +1,15 @@
 {
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "demichev-local",
-  "owner": { "name": "Denis Demichev" },
+  "description": "Personal local marketplace for Denis Demichev's Claude Code plugin",
+  "owner": {
+    "name": "Denis Demichev",
+    "email": "demichev@gmail.com"
+  },
   "plugins": [
     {
-      "name": "claude-config",
-      "source": ".",
+      "name": "ecc",
+      "source": "./",
       "description": "Personal Claude Code plugin",
       "version": "0.1.0",
       "license": "MIT"

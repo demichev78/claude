@@ -43,7 +43,7 @@ In any Claude Code session, run the two slash commands:
 
 ```text
 /plugin marketplace add /Users/demichev/WORK/Projects/claude
-/plugin install claude-config@demichev-local
+/plugin install ecc@demichev-local
 ```
 
 Use your repo's absolute path in the first command. After `/plugin install`, Claude Code auto-registers:
@@ -71,7 +71,7 @@ After editing the repo, either start a new session (cache refreshes automaticall
 ## Uninstall
 
 ```text
-/plugin uninstall claude-config@demichev-local
+/plugin uninstall ecc@demichev-local
 /plugin marketplace remove demichev-local
 ```
 
