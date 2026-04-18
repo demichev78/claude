@@ -40,6 +40,3 @@ func NewUserService(repo UserRepository, logger Logger) *UserService {
 }
 ```
 
-## Reference
-
-See skill: `golang-patterns` for comprehensive Go patterns including concurrency, error handling, and package organization.

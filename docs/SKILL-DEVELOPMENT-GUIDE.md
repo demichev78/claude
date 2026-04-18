@@ -200,7 +200,7 @@ Write content that Claude can **immediately use**:
 
 Focus on idiomatic code, naming conventions, and language-specific patterns.
 
-**Examples:** `python-patterns`, `golang-patterns`, `typescript-standards`
+**Examples:** `python-patterns`, `java-coding-standards`
 
 ```markdown
 ---
@@ -231,7 +231,7 @@ with open('file.txt') as f:
 
 Focus on framework-specific conventions, common patterns, and anti-patterns.
 
-**Examples:** `nextjs-turbopack`, `springboot-patterns`
+**Examples:** `springboot-patterns`, `frontend-patterns`
 
 ```markdown
 ---

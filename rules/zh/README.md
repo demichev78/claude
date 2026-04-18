@@ -83,7 +83,7 @@ cp -r rules/php ~/.claude/rules/php
 ## 规则 vs 技能
 
 - **规则** 定义广泛适用的标准、约定和检查清单（如"80% 测试覆盖率"、"禁止硬编码密钥"）。
-- **技能**（`skills/` 目录）为特定任务提供深入、可操作的参考材料（如 `python-patterns`、`golang-testing`）。
+- **技能**（`skills/` 目录）为特定任务提供深入、可操作的参考材料（如 `python-patterns`、`python-testing`）。
 
 语言特定的规则文件在适当的地方引用相关技能。规则告诉你*做什么*；技能告诉你*怎么做*。
 

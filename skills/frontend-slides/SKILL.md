@@ -171,7 +171,6 @@ Use these maxima unless the user explicitly asks for denser slides and readabili
 ## Related ECC Skills
 
 - `frontend-patterns` for component and interaction patterns around the deck
-- `liquid-glass-design` when a presentation intentionally borrows Apple glass aesthetics
 - `e2e-testing` if you need automated browser verification for the final deck
 
 ## Deliverable Checklist

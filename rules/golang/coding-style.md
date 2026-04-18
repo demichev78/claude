@@ -27,6 +27,3 @@ if err != nil {
 }
 ```
 
-## Reference
-
-See skill: `golang-patterns` for comprehensive Go idioms and patterns.

@@ -25,9 +25,6 @@ Write long-form content that sounds like an actual person with a point of view, 
 
 ## Voice Handling
 
-If the user wants a specific voice, run `brand-voice` first and reuse its `VOICE PROFILE`.
-Do not duplicate a second style-analysis pass here unless the user explicitly asks for one.
-
 If no voice references are given, default to a sharp operator voice: concrete, unsentimental, useful.
 
 ## Banned Patterns

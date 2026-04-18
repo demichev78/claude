@@ -26,6 +26,3 @@ go test -race ./...
 go test -cover ./...
 ```
 
-## Reference
-
-See skill: `golang-testing` for detailed Go testing patterns and helpers.

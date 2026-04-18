@@ -111,14 +111,6 @@
 
 ---
 
-## Automation
-
-| Command | What it does |
-|---------|-------------|
-| `/claw` | Start NanoClaw v2 — persistent REPL with model routing, skill hot-load, branching, and metrics |
-
----
-
 ## Project & Infrastructure
 
 | Command | What it does |

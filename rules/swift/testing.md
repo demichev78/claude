@@ -40,6 +40,3 @@ func validatesFormat(format: String) throws {
 swift test --enable-code-coverage
 ```
 
-## Reference
-
-See skill: `swift-protocol-di-testing` for protocol-based dependency injection and mock patterns with Swift Testing.

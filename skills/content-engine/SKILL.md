@@ -36,20 +36,16 @@ Before drafting, identify the source set:
 - prior posts from the same author
 
 If the user wants a specific voice, build a voice profile from real examples before writing.
-Use `brand-voice` as the canonical workflow when voice consistency matters across more than one output.
 
 ## Voice Handling
 
-`brand-voice` is the canonical voice layer.
+When voice consistency matters across more than one output, build a voice profile from real examples (posts, essays, launch notes) before writing. Reuse that profile across downstream outputs instead of rebuilding a second voice model.
 
-Run it first when:
+Build a voice profile first when:
 
 - there are multiple downstream outputs
 - the user explicitly cares about writing style
 - the content is launch, outreach, or reputation-sensitive
-
-Reuse the resulting `VOICE PROFILE` here instead of rebuilding a second voice model.
-If the user wants Affaan / ECC voice specifically, still treat `brand-voice` as the source of truth and feed it the best live or source-derived material available.
 
 ## Hard Bans
 
@@ -124,8 +120,3 @@ Before delivering:
 - no duplicated copy across platforms unless requested
 - any CTA is earned and user-approved
 
-## Related Skills
-
-- `brand-voice` for source-derived voice profiles
-- `crosspost` for platform-specific distribution
-- `x-api` for sourcing recent posts and publishing approved X output

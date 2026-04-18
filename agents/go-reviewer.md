@@ -72,5 +72,3 @@ govulncheck ./...
 - **Approve**: No CRITICAL or HIGH issues
 - **Warning**: MEDIUM issues only
 - **Block**: CRITICAL or HIGH issues found
-
-For detailed Go code examples and anti-patterns, see `skill: golang-patterns`.

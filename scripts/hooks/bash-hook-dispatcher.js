@@ -8,7 +8,6 @@ const { run: runAutoTmuxDev } = require('./auto-tmux-dev');
 const { run: runTmuxReminder } = require('./pre-bash-tmux-reminder');
 const { run: runGitPushReminder } = require('./pre-bash-git-push-reminder');
 const { run: runCommitQuality } = require('./pre-bash-commit-quality');
-const { run: runGateGuard } = require('./gateguard-fact-force');
 const { run: runCommandLog } = require('./post-bash-command-log');
 const { run: runPrCreated } = require('./post-bash-pr-created');
 const { run: runBuildComplete } = require('./post-bash-build-complete');
@@ -19,53 +18,48 @@ const PRE_BASH_HOOKS = [
   {
     id: 'pre:bash:block-no-verify',
     profiles: 'minimal,standard,strict',
-    run: rawInput => runBlockNoVerify(rawInput),
+    run: rawInput => runBlockNoVerify(rawInput)
   },
   {
     id: 'pre:bash:auto-tmux-dev',
-    run: rawInput => runAutoTmuxDev(rawInput),
+    run: rawInput => runAutoTmuxDev(rawInput)
   },
   {
     id: 'pre:bash:tmux-reminder',
     profiles: 'strict',
-    run: rawInput => runTmuxReminder(rawInput),
+    run: rawInput => runTmuxReminder(rawInput)
   },
   {
     id: 'pre:bash:git-push-reminder',
     profiles: 'strict',
-    run: rawInput => runGitPushReminder(rawInput),
+    run: rawInput => runGitPushReminder(rawInput)
   },
   {
     id: 'pre:bash:commit-quality',
     profiles: 'strict',
-    run: rawInput => runCommitQuality(rawInput),
-  },
-  {
-    id: 'pre:bash:gateguard-fact-force',
-    profiles: 'standard,strict',
-    run: rawInput => runGateGuard(rawInput),
-  },
+    run: rawInput => runCommitQuality(rawInput)
+  }
 ];
 
 const POST_BASH_HOOKS = [
   {
     id: 'post:bash:command-log-audit',
-    run: rawInput => runCommandLog(rawInput, 'audit'),
+    run: rawInput => runCommandLog(rawInput, 'audit')
   },
   {
     id: 'post:bash:command-log-cost',
-    run: rawInput => runCommandLog(rawInput, 'cost'),
+    run: rawInput => runCommandLog(rawInput, 'cost')
   },
   {
     id: 'post:bash:pr-created',
     profiles: 'standard,strict',
-    run: rawInput => runPrCreated(rawInput),
+    run: rawInput => runPrCreated(rawInput)
   },
   {
     id: 'post:bash:build-complete',
     profiles: 'standard,strict',
-    run: rawInput => runBuildComplete(rawInput),
-  },
+    run: rawInput => runBuildComplete(rawInput)
+  }
 ];
 
 function readStdinRaw() {
@@ -88,28 +82,24 @@ function normalizeHookResult(previousRaw, output) {
     return {
       raw: String(output),
       stderr: '',
-      exitCode: 0,
+      exitCode: 0
     };
   }
 
   if (output && typeof output === 'object') {
-    const nextRaw = Object.prototype.hasOwnProperty.call(output, 'stdout')
-      ? String(output.stdout ?? '')
-      : !Number.isInteger(output.exitCode) || output.exitCode === 0
-        ? previousRaw
-        : '';
+    const nextRaw = Object.prototype.hasOwnProperty.call(output, 'stdout') ? String(output.stdout ?? '') : !Number.isInteger(output.exitCode) || output.exitCode === 0 ? previousRaw : '';
 
     return {
       raw: nextRaw,
       stderr: typeof output.stderr === 'string' ? output.stderr : '',
-      exitCode: Number.isInteger(output.exitCode) ? output.exitCode : 0,
+      exitCode: Number.isInteger(output.exitCode) ? output.exitCode : 0
     };
   }
 
   return {
     raw: previousRaw,
     stderr: '',
-    exitCode: 0,
+    exitCode: 0
   };
 }
 
@@ -151,9 +141,7 @@ async function main() {
   const mode = process.argv[2];
   const raw = await readStdinRaw();
 
-  const result = mode === 'post'
-    ? runPostBash(raw)
-    : runPreBash(raw);
+  const result = mode === 'post' ? runPostBash(raw) : runPreBash(raw);
 
   if (result.stderr) {
     process.stderr.write(result.stderr);
@@ -173,5 +161,5 @@ module.exports = {
   PRE_BASH_HOOKS,
   POST_BASH_HOOKS,
   runPreBash,
-  runPostBash,
+  runPostBash
 };
