@@ -1,0 +1,9 @@
+{
+  "name": "sidecar",
+  "version": "0.1.0",
+  "description": "A right-hand sidebar with cards for the model, plan limits, context, cache, subagents and recent file changes",
+  "author": {
+    "name": "demichev"
+  },
+  "types": "./types/index.d.ts"
+}

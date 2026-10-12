@@ -13,6 +13,13 @@
       "description": "Personal Claude Code plugin",
       "version": "0.1.0",
       "license": "MIT"
+    },
+    {
+      "name": "sidecar",
+      "source": "./mods/sidecar",
+      "description": "Right-hand sidebar mod: model and effort, plan limits, context, cache with keep-warm, subagents and recent file changes",
+      "version": "0.1.0",
+      "license": "MIT"
     }
   ]
 }
